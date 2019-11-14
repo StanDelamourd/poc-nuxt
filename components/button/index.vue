@@ -1,5 +1,5 @@
 <template>
-  <button @click="clickEvent">{{title}}</button>
+  <button @click="execute">{{title}}</button>
 </template>
 <script>
 export default {
@@ -13,7 +13,14 @@ export default {
       required: false,
       type: Function
     }
-  }  
+  },
+  methods: {
+    execute(){
+      if(this.clickEvent){
+        this.clickEvent();
+      }
+    }
+  }
 }
 </script>
 <style scoped>
