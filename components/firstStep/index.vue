@@ -1,7 +1,7 @@
 <template>
   <div>
     <Field :value="name" label="Nom"/>
-    <Field :value="name" label="Prenom"/>
+    <Field :value="firstname" label="Prenom"/>
   </div>
 </template>
 

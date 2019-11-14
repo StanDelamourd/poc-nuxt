@@ -1,7 +1,7 @@
 <template>
   <div class="formGroup">
     <label for="">{{label}}</label>
-    <input :type="text" @input="updateValue($event.target.value)"/>
+    <input :type="inputType" @input="updateValue($event.target.value)"/>
   </div>
 </template>
 

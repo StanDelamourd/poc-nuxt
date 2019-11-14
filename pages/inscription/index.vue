@@ -2,7 +2,8 @@
   <div>
     <div class="form">
       <form>
-        <FirstStep/>
+        <!-- <FirstStep/> -->
+        <SecondStep/>
       </form>
     </div>
     <Button title="Suivant" />
@@ -10,6 +11,8 @@
 </template>
 <script>
 import FirstStep from '../../components/firstStep';
+import SecondStep from '../../components/secondStep';
+
 import Button from '../../components/button';
 
 export default {
@@ -20,7 +23,8 @@ export default {
   },
   components:{
     FirstStep,
-    Button
+    SecondStep,
+    Button,
   }
 }
 </script>
