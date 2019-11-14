@@ -11,7 +11,7 @@
       </div>
       <input type="range" @input="updateValue($event.target.value)">
     </div>
-    <input v-else :type="inputType || 'text'" @input="updateValue($event.target.value)"/>
+    <input v-else :type="inputType || 'text'" @input="updateValue($event.target.value)" :disabled="disabled || false"/>
   </div>
 </template>
 
@@ -19,6 +19,9 @@
 export default {
   name: 'Field',
   props: {
+    disabled:{
+      type: Boolean,
+    },
     inputType: {
       type: String,
       value: 'text',
@@ -34,9 +37,6 @@ export default {
       type: String,
       required: true
     }
-  },
-  created(){
-    console.log(this.inputType)
   },
   methods:{
     updateValue(inputValue){

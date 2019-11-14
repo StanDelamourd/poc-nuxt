@@ -17,7 +17,7 @@ export default {
   data(){
     return {
       city: '',
-      radius: 1
+      radius: '1'
     };
   }
 }

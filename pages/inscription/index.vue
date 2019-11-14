@@ -6,7 +6,8 @@
         <!-- <SecondStep/> -->
         <!-- <ThirdStep/> -->
         <!-- <FourthStep/> -->
-        <FivethStep/>
+        <!-- <FivethStep/> -->
+        <SixthStep/>
       </form>
     </div>
     <Button title="Suivant" />
@@ -18,6 +19,7 @@ import SecondStep from '../../components/secondStep';
 import ThirdStep from '../../components/thirdStep';
 import FourthStep from '../../components/fourthStep';
 import FivethStep from '../../components/fivethStep';
+import SixthStep from '../../components/sixthStep';
 
 import Button from '../../components/button';
 
@@ -33,13 +35,14 @@ export default {
     ThirdStep,
     FourthStep,
     FivethStep,
+    SixthStep,
     Button,
   }
 }
 </script>
 
 <style scoped>
-  div >>> button {
+  div >>> .fullButton {
     position: absolute;
     left: 50%;
     bottom: 5vh;
