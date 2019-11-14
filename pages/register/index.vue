@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="form">
+  <div :class="[step === 7 ? '' : 'register']">
+    <div class="form" v-if="step !== 7">
       <form>
         <FirstStep v-if="step === 1"/>
         <SecondStep v-else-if="step === 2"/>
@@ -10,7 +10,8 @@
         <SixthStep v-else-if="step === 6"/>
       </form>
     </div>
-    <Button title="Suivant" :clickEvent="changeStep"/>
+    <LastStep v-if="step === 7"/>
+    <Button v-if="step !== 7" title="Suivant" :clickEvent="changeStep"/>
   </div>  
 </template>
 <script>
@@ -20,6 +21,7 @@ import ThirdStep from '../../components/thirdStep';
 import FourthStep from '../../components/fourthStep';
 import FivethStep from '../../components/fivethStep';
 import SixthStep from '../../components/sixthStep';
+import LastStep from '../../components/lastStep';
 
 import Button from '../../components/button';
 
@@ -36,6 +38,7 @@ export default {
     FourthStep,
     FivethStep,
     SixthStep,
+    LastStep,
     Button,
   },
   methods:{
@@ -47,7 +50,7 @@ export default {
 </script>
 
 <style scoped>
-  div >>> .fullButton {
+  .register >>> .fullButton {
     position: absolute;
     left: 50%;
     bottom: 5vh;

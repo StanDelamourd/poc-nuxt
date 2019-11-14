@@ -1,5 +1,5 @@
 <template>
-  <button @click="execute" :class="[semi ? 'semiButton' : 'fullButton']">{{title}}</button>
+  <button @click.prevent="execute" :class="[semi ? 'semiButton' : 'fullButton']">{{title}}</button>
 </template>
 <script>
 export default {
