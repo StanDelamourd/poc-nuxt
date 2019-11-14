@@ -1,7 +1,10 @@
 <template>
   <div class="formGroup">
     <label for="">{{label}}</label>
-    <input :type="inputType" @input="updateValue($event.target.value)"/>
+    <select v-if="datas" name="" id="" @change="updateValue($event.target.value)">
+      <option v-for="data in datas" :key="data.value" :value="data.title">{{data.title}}</option>
+    </select>
+    <input v-else :type="inputType" @input="updateValue($event.target.value)"/>
   </div>
 </template>
 
@@ -12,6 +15,9 @@ export default {
     inputType: {
       type: String,
       value: 'text',
+    },
+    datas: {
+      type: Array,
     },
     label: {
       type: String,
@@ -30,6 +36,16 @@ export default {
 }
 </script>
 <style scoped>
+  select{
+    background: grey;
+    color: black;
+    width: 100%;
+    height: 5vh;
+    margin-top: 1vh;
+  }
+  option {
+    color: black;
+  }
   .formGroup{
     margin-bottom: 2vh;
   }

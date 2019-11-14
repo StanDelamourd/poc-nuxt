@@ -3,7 +3,8 @@
     <div class="form">
       <form>
         <!-- <FirstStep/> -->
-        <SecondStep/>
+        <!-- <SecondStep/> -->
+        <ThirdStep/>
       </form>
     </div>
     <Button title="Suivant" />
@@ -12,6 +13,7 @@
 <script>
 import FirstStep from '../../components/firstStep';
 import SecondStep from '../../components/secondStep';
+import ThirdStep from '../../components/thirdStep';
 
 import Button from '../../components/button';
 
@@ -24,6 +26,7 @@ export default {
   components:{
     FirstStep,
     SecondStep,
+    ThirdStep,
     Button,
   }
 }
