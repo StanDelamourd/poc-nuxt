@@ -1,5 +1,5 @@
 <template>
-  <button @click="execute">{{title}}</button>
+  <button @click="execute" class="buttonComponent">{{title}}</button>
 </template>
 <script>
 export default {

@@ -1,48 +1,44 @@
 <template>
-<div>
-  <Card v-for="post in posts" :key="post.title" :title="post.title" :description="post.description"/>
-  <Test v-for="item in items" :key="item.title" :title="item.title"/>
-  <p v-if="isDisplay">{{title}}</p>
-  <p v-else>ookok</p>
-</div>  
-
+  <div>
+    <div class="form">
+      <form>
+        <FirstStep/>
+      </form>
+    </div>
+    <Button title="Suivant" />
+  </div>  
 </template>
 <script>
-import Test from '../../components/test/index';
-import Card from '../../components/card/index';
+import FirstStep from '../../components/firstStep';
+import Button from '../../components/button';
+
 export default {
   data () {
     return {
-      user: {
-        username: "jou",
-        age: 12,
-        
-      },
-      posts: [
-        {
-          title: 'First',
-          description: 'second',
-        },
-        {
-          title:'bis',
-          description:'third',
-        },
-      ],
-      isDisplay: false,
-      title: 'Vuetify.js',
-      items: [
-        {
-          title: 'first'
-        },
-        {
-          title: 'first'
-        }
-      ]
+
     }
   },
   components:{
-    Test,
-    Card,
+    FirstStep,
+    Button
   }
 }
 </script>
+
+<style scoped>
+  div >>> button {
+    position: absolute;
+    left: 50%;
+    bottom: 5vh;
+    transform: translate(-50%, 0);
+    width: 95%;
+  }
+  .form {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+  }
+  form {
+    width: 100%;
+  }
+</style>
