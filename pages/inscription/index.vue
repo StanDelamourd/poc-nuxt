@@ -4,7 +4,9 @@
       <form>
         <!-- <FirstStep/> -->
         <!-- <SecondStep/> -->
-        <ThirdStep/>
+        <!-- <ThirdStep/> -->
+        <!-- <FourthStep/> -->
+        <FivethStep/>
       </form>
     </div>
     <Button title="Suivant" />
@@ -14,6 +16,8 @@
 import FirstStep from '../../components/firstStep';
 import SecondStep from '../../components/secondStep';
 import ThirdStep from '../../components/thirdStep';
+import FourthStep from '../../components/fourthStep';
+import FivethStep from '../../components/fivethStep';
 
 import Button from '../../components/button';
 
@@ -27,6 +31,8 @@ export default {
     FirstStep,
     SecondStep,
     ThirdStep,
+    FourthStep,
+    FivethStep,
     Button,
   }
 }

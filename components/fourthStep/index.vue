@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1>Metier</h1>
-    <h2>Dans quel type de metier aimeriez-vous travailler ?</h2>
+    <h1>Situation</h1>
+    <h2>Pour que nous vous proposions des emplois adapte a votre besoin</h2>
     <Field :value="situation" label="Situation" :datas="situations"/>
   </div>
 </template>
