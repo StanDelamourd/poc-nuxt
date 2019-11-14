@@ -7,12 +7,12 @@
     <div class="filters">
       <input type="search">
       <div class="filters__select">
-        <Filter :datas="times" />
-        <Filter :datas="missions" />
+        <!-- <Filter :datas="times" />
+        <Filter :datas="missions" /> -->
       </div>
     </div>
     <div class="offers">
-
+      <Offer v-for="offer in offers" :key="offer.profession" :offer="offer"/>
     </div>
   </div>
 </template>
@@ -20,11 +20,13 @@
 <script>
 import Button from '../../components/button';
 import Filter from '../../components/filter';
+import Offer from '../../components/offer';
 
 export default {
   components:{
     Button,
-    Filter
+    Filter,
+    Offer
   },
   data(){
     return {
@@ -61,31 +63,31 @@ export default {
           time: '18 mois'
         },
         {
-          profession: 'Infirmier',
+          profession: 'Medecin',
           place: 'EHPAD, Bordeaux',
           type: 'CDD',
           time: '18 mois'
         },
         {
-          profession: 'Infirmier',
+          profession: 'Aide soignant',
           place: 'EHPAD, Bordeaux',
           type: 'CDD',
           time: '18 mois'
         },
         {
-          profession: 'Infirmier',
+          profession: 'Aide soignante',
           place: 'EHPAD, Bordeaux',
           type: 'CDD',
           time: '18 mois'
         },
         {
-          profession: 'Infirmier',
+          profession: 'Auxiliaire de puericulture',
           place: 'EHPAD, Bordeaux',
           type: 'CDD',
           time: '18 mois'
         },
         {
-          profession: 'Infirmier',
+          profession: 'Pharmacien',
           place: 'EHPAD, Bordeaux',
           type: 'CDD',
           time: '18 mois'
