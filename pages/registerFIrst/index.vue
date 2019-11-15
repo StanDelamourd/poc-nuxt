@@ -38,5 +38,11 @@ export default {
   }
   .register__bg{
     background: url('../../static/bg.png');
+    height: 50vh;
+  }
+  .register__bg h1 {
+    color: white;
+    text-align:center;
+    padding-top: 35vh;
   }
 </style>

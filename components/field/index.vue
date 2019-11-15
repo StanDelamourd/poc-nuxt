@@ -58,17 +58,12 @@ export default {
     border: 1px solid black;
   }
   input[type=range]::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 8.4px;
-    cursor: pointer;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    background: #3071a9;
-    border-radius: 1.3px;
-    border: 0.2px solid #010101;
+    background: #000;
+    border: 1px solid black;
   }
 
   input[type=range]:focus::-webkit-slider-runnable-track {
-    background: #367ebd;
+    background: #000;
   }
 
 input[type=range]::-moz-range-track {

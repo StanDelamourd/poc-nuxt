@@ -23,7 +23,7 @@
   font-family: 'Telegraf'
 }
 div {
-  width: 95%;
+  width: 100%;
   margin:auto;
 }
 </style>
