@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img src="icon.png" alt="logo">
+    <img src="logo.png" alt="logo">
     <div class="home__button">
       <Button title="S'inscrire" :clickEvent="this.test"/>
       <Button title="Se connecter"/>
@@ -23,7 +23,7 @@ export default {
 </script>
 <style scoped>
 img {
-  width: 50%;
+  width: 90%;
   margin: 20vh auto 0 auto;
   display: block;
 }
