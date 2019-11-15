@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>S'inscrire</h1>
     <Field :value="name" label="Nom"/>
     <Field :value="firstname" label="Prenom"/>
   </div>
