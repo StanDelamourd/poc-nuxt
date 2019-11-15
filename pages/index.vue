@@ -1,71 +1,57 @@
 <template>
-<div>
-  <no-ssr>
-    <Flickity ref="flickity" :options="flickityOptions" class="otherTest">
-      <div class="carousel-cell">
-        <div class="img__team">
-          <img src="first.png" alt="team">
-        </div>
-        <h3>Inscrivez-vous <br/> sur A2JOB</h3>
-      </div>
-      <div class="carousel-cell">
-        <div class="img__team">
-          <img src="second.png" alt="trees" class="treesPicture"/>
-        </div>
-        <h3>Chercher un job</h3>
-      </div>
-      <div class="carousel-cell">
-        <div class="img__team">
-          <img src="last.png" alt="life" class="lifePicture"/>
-        </div>
-        <h3>Trouver un employe</h3>
-      </div>
-    </Flickity>
-  </no-ssr>
-  <button v-if="currentIndex === 2" @click="change">Suivant</button>
-</div>
+  <div>
+    <div class="register__bg">
+      <h1>S'inscrire</h1>
+    </div>
+    <div class="form">
+      <form>
+        <Field label="Email" inputType="email" />
+        <Field label="Mot de passe" inputType="password" />
+        <Field label="Confirmer mot de passe" inputType="password" />
+      </form>
+    </div>
+    <button class="register__button" @click="$router.push({ name: 'register'})">S'inscrire</button>
+    <button>Deja inscrit</button>
+  </div>  
 </template>
 
 <script>
 import Button from '../components/button';
-import Flickity from 'vue-flickity';
-
+import Field from '../components/field';
 export default {
-  components: {
-    Button,
-    Flickity
-  },
-  data(){
+  data () {
     return {
-      currentIndex: 0,
-      flickityOptions: {
-				initialIndex: 0,
-				pageDots: true,
-				wrapAround: false,
-				prevNextButtons: false,
-				freeScroll: false
-			}
+      step: 1,
     }
   },
-  mounted(){
-		setTimeout(() => {
-			this.$refs.flickity.on('change', (event) => {
-				this.currentIndex = event;
-			});
-		}, 1000);
-	},
+  components:{
+    Field,
+  },
   methods:{
-    change() {
-        this.$router.push({name: 'first'})
+    changeStep(){
+      this.step += 1;
     }
   }
 }
 </script>
+
 <style scoped>
-  button {
-    position: fixed;
-    left: 5%;
-    top: 80vh;
+  .form{
+    border-radius: 40px;
+    background: #fff;
+    margin-top: -50px;
+    padding-top: 50px;
+  }
+  button:last-child {
+    width: 100%;
+    margin: auto;
+    margin-top: 3vh;
+  }
+  form {
+    width: 80%;
+    margin: auto;
+  }
+  .register__button {
     display: block;
     color: white;
     width: 90%;
@@ -74,37 +60,14 @@ export default {
     background: #FD5C63;
     border-radius: 20px;
   }
-  h3{
-    text-align: center;
-    font-size: 2em;
-    margin-top: 10vh;
+  .register__bg{
+    background: url('../static/bg.png');
+    height: 50vh;
   }
-  .otherTest{
-    height: 90vh;    
-  }
-  img {
-    width: 80%;
-    margin: 20vh auto 0 auto;
-    display: block;
-  }
-  .home__button{
-    margin-top: 25vh;
-  }
-
-  div >>> .flickity-page-dots .dot.is-selected {
-    background: #FD5C63 !important;
-  }
-  div >>> .dot.is-selected {
-    background: #FD5C63 !important;
-  }
-  .flickity-enabled {
-    width: 100%;
-	}
-  .carousel-cell {
-    width: 100%;
-    height: 70vh;
-	}
-  .flickity-slider {
-    transform: translateX(0)!important;
+  .register__bg h1 {
+    color: white;
+    text-align:center;
+    padding-top: 35vh;
+    font-size: 2.4em;
   }
 </style>
