@@ -2,8 +2,10 @@
   <div>
     <div class="profile__picture">
       <div class="profile__picture_cover"/>
-      <img src="icon.png" alt="profile">
-      <h1>Prenom Nom</h1>
+      <img src="profile.png" alt="profile">
+      <h1>Christine Millot</h1>
+      <h2>Bordeaux, France</h2>
+      <h2>Infirmiere</h2>
     </div>
     <div class="profile__complete">
       <p>Augmentez vos chances de trouver un emploi en completant votre profil</p>
@@ -50,6 +52,15 @@ export default {
 </script>
 
 <style scoped>
+  h2 {
+    font-family: 'Telegraf';
+    font-size: 1.2em;
+    font-weight: 400;
+    text-align: center;
+  }
+  h2:last-child {
+    margin-bottom: 2vh;
+  }
   .profile__nav {
     width: 92%;
     margin: auto;
@@ -84,6 +95,7 @@ export default {
   .profile__complete_progression div{
     height: 1.2vh;
     width: 32%;
+    border-radius:5px;
     background: rgba(125, 125, 125, .7);
   }
   .profile__complete_progression div:first-child {
@@ -91,17 +103,16 @@ export default {
   }
   h1 {
     font-weight: 400;
-    margin: 2vh 0;
+    margin-top: 2vh;
     font-size: 1.5em;
   }
   img[alt=profile]{
     display: block;
-    height: 70px;
-    width: 70px;
+    height: 80px;
+    width: 80px;
     border-radius: 50%;
-    border: 1px solid black;
     margin: auto;
-    margin-top: -35px;
+    margin-top: -40px;
   }
   h1 {
     text-align: center;

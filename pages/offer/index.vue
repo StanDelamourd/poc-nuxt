@@ -1,7 +1,13 @@
 <template>
   <div class="offer">
-    <h1>Infirmier</h1>
-    <h2>EHPAD Bordeaux</h2>
+    <div class="offer__title">
+      <img src="icon.png" alt="Offer picture">
+      <div>
+        <h1>Infirmier</h1>
+        <h2>EHPAD Bordeaux</h2>
+        <h2>CDD 18 mois</h2>
+      </div>
+    </div>
     <div class="offer__infos">
       <div class="schedule">
         <p>Horaires</p>
@@ -15,15 +21,10 @@
         <p>Mobilite</p>
         <p>Vehicule requis</p>
       </div>
-      <div class="experience">
-        <p>Experience</p>
-        <p>Intermediaire</p>
-      </div>
     </div>
-    <h3 class="description">Description</h3>
-    <div>
-      <p>Champ d'action</p>
-      <p>Hebergement, Alzheimer</p>
+    <div class="description">
+      <p>La Villa Danielle Torelli, EHPAD associative située dans le 15ème arrondissent de Paris, (80 résidents, dont une unité pilote pour jeunes patients Alzheimer et un PASA) recrute un infirmier pour travailler en journée.</p>
+      <p> L'infirmier est chargé de la gestion des traitements des résidents, de la coordination des soins, de l'accompagnement et de la supervision de l'équipe. Sous l'autorité du cadre infirmier, il travaille en étroite collaboration avec le médecin coordonnateur et l'ensemble de l'équipe pluridisciplinaire</p>
     </div>
     <h3 class="othersOffers">Offres similaires</h3>
     <div class="offers">
@@ -67,26 +68,44 @@ export default {
 </script>
 
 <style scoped>
+  * {
+    font-family: 'Telegraf'
+  }
+  .offer__title {
+    display: flex;
+    margin-top: 2vh;
+  }
+  .offer__title img {
+    height: 80px;
+    width: 80px;
+  }
+  .description{
+    margin-top: 5vh;
+  }
+  .description p{
+    margin-top: 2vh;
+  }
   h3 {
     font-size: 1em;
-    margin-top: 10vh;
+    margin-top: 2vh;
+    font-weight: 400;
   }
   .othersOffers{
     text-align: center;
     font-size: 2em;
   }
-  h1, h2 {
-    text-align: center;
-  }
   h1{
-    padding-top: 2vh;
+    padding-top: 1.5vh;
     font-weight: 400;
+    font-size: 1.4em;
   }
   h2{
-    padding-top: 1vh;
     font-weight: 400;
-    font-size: 1.3em;
-    margin-bottom: 2vh;
+    font-size: 1.2em;
+  }
+  h2:last-child{
+    font-weight: 400;
+    font-size: 1em;
   }
   .offer {
     width: 92% ;
@@ -96,9 +115,11 @@ export default {
   .offer__infos{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: .9em;
   }
   .offer__infos div {
-    width: 50%;
+    width: 33%;
     margin-top: 3vh;
     text-align: center;
   }

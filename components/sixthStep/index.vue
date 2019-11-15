@@ -3,8 +3,8 @@
     <h1>Votre contrat</h1>
     <h2>Etes-vous un citoyen de l'Union Europeene ?</h2>
     <div class="answer">
-      <Button title="oui" :semi="true" :clickEvent="handleButton"/>
-      <Button title="non" :semi="true" :clickEvent="handleButton"/>
+      <Button title="oui" :semi="true" />
+      <Button title="non" :semi="true" />
     </div>
     <h2>Si ce n'est pas le cas, qu'elle est le type de votre contrat de travail ?</h2>
     <Field :value="contract" label="Contrat"/>
@@ -23,13 +23,10 @@ export default {
   },
   data(){
     return {
-      contract: ''
+      contract: '',
     }
   },
   methods:{
-    handleButton(e){
-      console.log('yes')
-    }
   }
 }
 </script>

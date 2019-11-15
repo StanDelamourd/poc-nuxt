@@ -6,7 +6,7 @@
 <style scoped>
 @font-face {
   font-family: "Telegraf";
-  src: url("/fonts/telegraf/Telegraf-Regular-200.otf") format("opentype");
+  src: url("/fonts/telegraf/Telegraf-UltraLight-200.otf") format("opentype");
   font-weight: 200;
 }
 @font-face {
@@ -16,7 +16,7 @@
 }
 @font-face {
   font-family: "Telegraf";
-  src: url("/fonts/telegraf/Telegraf-Regular-800.otf") format("opentype");
+  src: url("/fonts/telegraf/Telegraf-UltraBold-800.otf") format("opentype");
   font-weight: 800;
 }
 * {

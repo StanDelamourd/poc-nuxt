@@ -1,10 +1,12 @@
 <template>
   <div class="card__offer" @click="$router.push({ name: 'offer'})">
-    <img src="icon.png" alt="check"/>
-    <div class="informations">
-      <h3>{{offer.profession}}</h3>
-      <p class="place">{{offer.place}}</p>
-      <p>{{offer.type}} {{offer.time}}</p>
+    <div class="card__infos">
+      <img src="icon.png" alt="check"/>
+      <div class="informations">
+        <h3>{{offer.profession}}</h3>
+        <p class="place">{{offer.place}}</p>
+        <p>{{offer.type}} {{offer.time}}</p>
+      </div>
     </div>
     <div class="popup">
       <p>Completez votre profil pour acceder a cette offre</p>
@@ -25,9 +27,6 @@ export default {
 </script>>
 
 <style scoped>
-  .place {
-    padding-bottom: 2vh;
-  }
   .popup{
     position: absolute;
     bottom: 0;
@@ -43,16 +42,26 @@ export default {
     height: 80px;
   }
   .informations {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin-left: 2vw;
     height: 80px;
   }
-  h3 {
-    font-size: 1.5em;
-    font-weight: 400;
+  .informations p {
+    color: #7a7a7a;
   }
-  .card__offer{
-    position:relative;
+  h3 {
+    font-family: 'Telegraf';
+    font-size: 1.5em;
+    font-weight: 800;
+  }
+  .card__infos{
     display: flex;
+    align-items: center;
+  }
+  .card__offer{ 
+    position:relative;
     padding: 10px;
     box-sizing: border-box;
     width: 100%;

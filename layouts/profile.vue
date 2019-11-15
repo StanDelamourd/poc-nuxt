@@ -40,6 +40,7 @@ export default {
     position: fixed;
     overflow: scroll;
     height: 90vh;
+    width: 100%;
     padding-bottom: 2vh;
   }
   nav{

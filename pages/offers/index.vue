@@ -12,6 +12,7 @@
         <FilterSelect :datas="interests" />
       </div>
     </div>
+    <p class="title__offer">{{offers.length}} offres d'emplois</p>
     <div class="offers">
       <Offer v-for="offer in offers" :key="offer.profession" :offer="offer"/>
     </div>
@@ -124,6 +125,18 @@ export default {
 </script>
 
 <style scoped>
+  .title__offer{
+    padding-top: 20px;
+    text-align: center;
+  }
+  .filters{
+    border-bottom: 1px solid grey;
+    padding-bottom: 10px; 
+  }
+  .filters__select{
+    overflow-y: scroll;
+    width: 100%;
+  }
   .offers__content {
    width: 92%;
    height: 90vh;
