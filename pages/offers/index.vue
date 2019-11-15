@@ -102,12 +102,6 @@ export default {
           time: '18 mois'
         },
         {
-          profession: 'Aide soignante',
-          place: 'EHPAD, Bordeaux',
-          type: 'CDD',
-          time: '18 mois'
-        },
-        {
           profession: 'Auxiliaire de vie',
           place: 'EHPAD, Bordeaux',
           type: 'CDD',
