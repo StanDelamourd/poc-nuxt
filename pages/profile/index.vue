@@ -7,9 +7,11 @@
     </div>
     <div class="profile__complete">
       <p>Augmentez vos chances de trouver un emploi en completant votre profil</p>
-      <div/>
-      <div/>
-      <div/>
+      <div class="profile__complete_progression">
+        <div/>
+        <div/>
+        <div/>
+      </div>
     </div>
   </div>
 </template>
@@ -27,10 +29,29 @@ export default {
     background: grey;
   }
   .profile__complete{
-    background: rgba(125, 125, 125, .5);
-    width: 95%;
+    background: rgba(125, 125, 125, .2);
+    width: 90%;
     margin: auto;
-    padding: 10px;
+    padding: 15px;
+    font-size: 1.2em;
+  }
+  .profile__complete_progression {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1vh;
+  }
+  .profile__complete_progression div{
+    height: 1.2vh;
+    width: 32%;
+    background: rgba(125, 125, 125, .7);
+  }
+  .profile__complete_progression div:first-child {
+    background: #000;
+  }
+  h1 {
+    font-weight: 400;
+    margin: 2vh 0;
+    font-size: 1.5em;
   }
   img[alt=profile]{
     display: block;
