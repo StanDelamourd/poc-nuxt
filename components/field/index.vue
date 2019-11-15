@@ -71,6 +71,40 @@ export default {
     background: #000;
   }
 
+input[type=range]::-webkit-range-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #000;
+}
+  input[type=range]::-webkit-track {
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #000;
+  }
+  input[type=range]::-webkit-fill-lower {
+    background: #000;
+    border: 0.2px solid #010101;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #000;
+  }
+  input[type=range]::-webkit-fill-upper {
+    background: #000;
+    border: 0.2px solid #010101;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  }
+  input[type=range]:focus::-webkit-fill-upper {
+    background: #000;
+    height: 1vh;
+  }
+
+
+
 input[type=range]::-moz-range-track {
   width: 100%;
   height: 1px;
