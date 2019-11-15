@@ -31,7 +31,7 @@ module.exports = {
   */
  plugins: [
     {
-      src: '~/plugins/flickity',
+      src: '~/plugins/vue-flickity',
       ssr: false
     },
   ],
