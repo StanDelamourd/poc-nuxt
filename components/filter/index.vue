@@ -5,7 +5,7 @@
 </template>
 <script>
 export default {
-  name: 'filter',
+  name: 'FilterSelect',
   props: {
     datas: {
       type: Array,
@@ -16,11 +16,12 @@ export default {
 </script>
 <style scoped>
 select{
-    background: grey;
+    background:#fff;
     color: black;
-    width: 100%;
+    border: 1px solid black;
     height: 5vh;
     margin-top: 1vh;
+    padding-left: 10px;
   }
   option {
     color: black;

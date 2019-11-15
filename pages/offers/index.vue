@@ -7,8 +7,8 @@
     <div class="filters">
       <input type="search">
       <div class="filters__select">
-        <!-- <Filter :datas="times" />
-        <Filter :datas="missions" /> -->
+        <FilterSelect :datas="times" />
+        <FilterSelect :datas="missions" />
       </div>
     </div>
     <div class="offers">
@@ -19,13 +19,13 @@
 
 <script>
 import Button from '../../components/button';
-import Filter from '../../components/filter';
+import FilterSelect from '../../components/filter';
 import Offer from '../../components/offer';
 
 export default {
   components:{
     Button,
-    Filter,
+    FilterSelect,
     Offer
   },
   data(){
