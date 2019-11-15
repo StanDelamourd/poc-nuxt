@@ -1,5 +1,5 @@
 <template>
-  <div class="card__offer">
+  <div class="card__offer" @click="$router.push({ name: 'offer'})">
     <img src="icon.png" alt="check"/>
     <div class="informations">
       <h3>{{offer.profession}}</h3>
@@ -58,6 +58,6 @@ export default {
     width: 100%;
     height: 19vh;
     margin-top: 2vh;
-    border: 1px solid black;
+    box-shadow: 0 1px 4px rgba(125,125,125,.3);;
   }
 </style>

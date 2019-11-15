@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="offers__content">
     <div class="complete">
       <p>Completez votre profil avec votre diplome et votre CV pour acceder aux offres d'emplois</p>
       <Button title="Ajouter mes pieces"/>
@@ -24,6 +24,7 @@ import FilterSelect from '../../components/filter';
 import Offer from '../../components/offer';
 
 export default {
+  layout: 'profile',
   components:{
     Button,
     FilterSelect,
@@ -105,7 +106,7 @@ export default {
           time: '18 mois'
         },
         {
-          profession: 'Auxiliaire de puericulture',
+          profession: 'Auxiliaire de vie',
           place: 'EHPAD, Bordeaux',
           type: 'CDD',
           time: '18 mois'
@@ -123,6 +124,11 @@ export default {
 </script>
 
 <style scoped>
+  .offers__content {
+   width: 92%;
+   height: 90vh;
+   margin: auto; 
+  }
   .complete{
     margin-top: 2vh;
     width: 100%;

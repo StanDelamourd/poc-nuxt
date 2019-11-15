@@ -1,9 +1,9 @@
 <template>
   <div>
-    <img src="icon.png" alt="check">
+    <img src="check.svg" alt="check">
     <h1>Vous y etes presque</h1>
     <h2>Veuillez confirmer votre adresse mail pour pouvoir continuer</h2>
-    <Button title="Envoyer" :clickEvent="$router.push({name: 'offers'})"/>
+    <Button title="Envoyer" :clickEvent="pushRoute"/>
   </div>
 </template>>
 
@@ -13,6 +13,11 @@ export default {
   name:'LastStep',
   components: {
     Button
+  },
+  methods:{
+    pushRoute(){
+      this.$router.push({name: 'offers'})
+    }
   }
 
 }
@@ -31,7 +36,7 @@ export default {
   }
   img {
     width: 50%;
-    margin: 20vh auto 0 auto;
+    margin: 20vh auto 4vh auto;
     display: block;
   }
 </style>

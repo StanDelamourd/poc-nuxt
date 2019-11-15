@@ -51,7 +51,7 @@ export default {
 
 <style scoped>
   .profile__nav {
-    width: 90%;
+    width: 92%;
     margin: auto;
     margin-top: 2vh;
     display: flex;
@@ -71,7 +71,7 @@ export default {
   }
   .profile__complete{
     background: rgba(125, 125, 125, .2);
-    width: 90%;
+    width: 92%;
     margin: auto;
     padding: 15px;
     font-size: 1.2em;
