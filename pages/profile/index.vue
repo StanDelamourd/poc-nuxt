@@ -13,16 +13,40 @@
         <div/>
       </div>
     </div>
+    <div class="profile__nav">
+      <button :class="[selectedItem === 'info' ? 'selectedButton' : '']">Mes infos</button>
+      <button :class="[selectedItem === 'document' ? 'selectedButton' : '']">Documents</button>
+      <button :class="[selectedItem === 'search' ? 'selectedButton' : '']">Ma recherche</button>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  layout: 'profile'
+  layout: 'profile',
+  data(){
+    return {
+      selectedItem: 'info'
+    }
+  }
 }
 </script>
 
 <style scoped>
+  .profile__nav {
+    width: 90%;
+    margin: auto;
+    margin-top: 2vh;
+    display: flex;
+  }
+  .selectedButton{
+    border-bottom: 2px solid black;
+  }
+  .profile__nav button {
+    height: 5vh;
+    width: calc(100%/3);
+    text-align: center;
+  }
   .profile__picture_cover {
     width: 100%;
     height: 10vh;
