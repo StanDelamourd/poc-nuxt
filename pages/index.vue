@@ -1,6 +1,6 @@
 <template>
 <div>
-  <no-ssr>
+  <noSsr>
     <flickity ref="flickity" :options="flickityOptions" class="otherTest">
       <div class="carousel-cell">
         <div class="img__team">
@@ -21,7 +21,7 @@
         <h3>Trouver un employe</h3>
       </div>
     </flickity>
-  </no-ssr>
+  </noSsr>
   <button v-if="currentIndex === 2" @click="change">Suivant</button>
 </div>
 </template>
