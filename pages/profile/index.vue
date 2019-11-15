@@ -14,9 +14,9 @@
       </div>
     </div>
     <div class="profile__nav">
-      <button :class="[selectedItem === 'info' ? 'selectedButton' : '']">Mes infos</button>
-      <button :class="[selectedItem === 'document' ? 'selectedButton' : '']">Documents</button>
-      <button :class="[selectedItem === 'search' ? 'selectedButton' : '']">Ma recherche</button>
+      <button :class="[selectedItem === 'info' ? 'selectedButton' : '']" @click="changeItem('info')">Mes infos</button>
+      <button :class="[selectedItem === 'document' ? 'selectedButton' : '']" @click="changeItem('document')">Documents</button>
+      <button :class="[selectedItem === 'search' ? 'selectedButton' : '']" @click="changeItem('search')">Ma recherche</button>
     </div>
     <Infos v-if="selectedItem === 'info'"/>
     <Documents v-if="selectedItem === 'document'"/>
@@ -39,6 +39,11 @@ export default {
   data(){
     return {
       selectedItem: 'info'
+    }
+  },
+  methods:{
+    changeItem(value){
+      this.selectedItem = value;
     }
   }
 }
