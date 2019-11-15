@@ -24,6 +24,7 @@ export default {
 <style scoped>
   div{
     width: 90%;
+    height: 40vh;
     margin: auto;
   }
 </style>
