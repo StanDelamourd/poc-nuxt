@@ -18,12 +18,24 @@
       <button :class="[selectedItem === 'document' ? 'selectedButton' : '']">Documents</button>
       <button :class="[selectedItem === 'search' ? 'selectedButton' : '']">Ma recherche</button>
     </div>
+    <Infos v-if="selectedItem === 'info'"/>
+    <Documents v-if="selectedItem === 'document'"/>
+    <Search v-if="selectedItem === 'search'"/>
   </div>
 </template>
 
 <script>
+import Search from '../../components/search';
+import Infos from '../../components/infos';
+import Documents from '../../components/documents';
+
 export default {
   layout: 'profile',
+  components:{
+    Search,
+    Infos,
+    Documents
+  },
   data(){
     return {
       selectedItem: 'info'

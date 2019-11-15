@@ -5,14 +5,14 @@
       <li>Type de contrat</li>
       <li>Champs d'intervention</li>
     </ul>
-    <Button label="Affiner ma recherche"/>
+    <Button title="Affiner ma recherche"/>
   </div>
 </template>
 
 <script>
 import Button from '../button';
 export default {
-  name: 'infos',
+  name: 'search',
   components:{
     Button
   }
@@ -24,9 +24,14 @@ export default {
     width: 90%;
     height: 40vh;
     margin: auto;
+    position: relative;
   }
   div >>> button {
-    width: 90%;
     margin: auto;
+    position: absolute;
+    bottom:0;
+  }
+  ul li {
+    list-style: none;
   }
 </style>

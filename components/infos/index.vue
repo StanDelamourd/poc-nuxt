@@ -7,7 +7,7 @@
       <li>Permis</li>
       <li>Vehicule</li>
     </ul>
-    <Button label="Completez mes infos"/>
+    <Button title="Completez mes infos"/>
   </div>
 </template>
 
@@ -26,5 +26,14 @@ export default {
     width: 90%;
     height: 40vh;
     margin: auto;
+    position: relative;
+  }
+  div >>> button {
+    margin: auto;
+    position: absolute;
+    bottom:0;
+  }
+  ul li {
+    list-style: none;
   }
 </style>

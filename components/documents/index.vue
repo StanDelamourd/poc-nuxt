@@ -4,14 +4,14 @@
       <li>CV</li>
       <li>Diplome</li>
     </ul>
-    <Button label="Ajouter mes pieces"/>
+    <Button title="Ajouter mes pieces"/>
   </div>
 </template>
 
 <script>
 import Button from '../button';
 export default {
-  name: 'infos',
+  name: 'documents',
   components:{
     Button
   }
@@ -23,5 +23,14 @@ export default {
     width: 90%;
     height: 40vh;
     margin: auto;
+    position: relative;
+  }
+  div >>> button {
+    margin: auto;
+    position: absolute;
+    bottom:0;
+  }
+  ul li {
+    list-style: none;
   }
 </style>
