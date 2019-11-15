@@ -9,6 +9,7 @@
       <div class="filters__select">
         <FilterSelect :datas="times" />
         <FilterSelect :datas="missions" />
+        <FilterSelect :datas="interests" />
       </div>
     </div>
     <div class="offers">
@@ -32,6 +33,26 @@ export default {
     return {
       times:[
         {
+          value: 'Horaires'
+        },
+        {
+          value: '6 mois'
+        },
+        {
+          value: '12 mois'
+        },
+        {
+          value: '18 mois'
+        },
+        {
+          value: '24 mois'
+        }
+      ],
+      interests:[
+        {
+          value: 'Champs d\'interets'
+        },
+        {
           value: '6 mois'
         },
         {
@@ -45,6 +66,9 @@ export default {
         }
       ],
       missions: [
+        {
+          value: 'Missions'
+        },
         {
           value: 'Infirmier'
         },
