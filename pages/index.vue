@@ -89,10 +89,10 @@ export default {
     margin-top: 25vh;
   }
 
-  .flickity-page-dots .dot.is-selected {
+  div >>> .flickity-page-dots .dot.is-selected {
     background: #FD5C63 !important;
   }
-  .dot.is-selected {
+  div >>> .dot.is-selected {
     background: #FD5C63 !important;
   }
   .flickity-enabled {
