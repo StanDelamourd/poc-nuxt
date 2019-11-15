@@ -2,8 +2,8 @@
   <div>
     <img src="icon.png" alt="logo">
     <div class="home__button">
-      <Button title="S'inscrire"/>
-      <Button title="Se connecter" :clickEvent="this.test"/>
+      <Button title="S'inscrire" :clickEvent="this.test"/>
+      <Button title="Se connecter"/>
     </div>
   </div>
 </template>
