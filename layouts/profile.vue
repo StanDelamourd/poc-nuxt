@@ -5,8 +5,10 @@
     </div>
     <nav>
       <ul>
-        <li @click="$router.push({name: 'offers'})">Offres</li>
-        <li @click="$router.push({name: 'profile'})">Profil</li>
+        <li @click="$router.push({name: 'offers'})"><img :src="$nuxt.$route.path === '/offers' ? 'offer-red.png' : 'offer.svg'" alt="offer"></li>
+        <li><img src="message.png" alt="message"></li>
+        <li><img src="bell.png" alt="offer"></li>
+        <li @click="$router.push({name: 'profile'})"><img :src="$nuxt.$route.path === '/profile' ? 'user-red.png' : 'user.png'" alt="user"></li>
       </ul>
     </nav>
   </div>
@@ -47,7 +49,7 @@ export default {
     position: fixed;
     height: 10vh;
     width: 100%;
-    background: grey;
+    background: #fff;
     bottom:0;
   }
   nav ul {
@@ -59,5 +61,9 @@ export default {
     color: white;
     text-align: center;
     line-height: 10vh;
+  }
+  img {
+    height: 20px;
+    width: 20px;
   }
 </style>

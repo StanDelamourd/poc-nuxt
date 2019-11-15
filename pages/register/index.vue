@@ -10,7 +10,7 @@
       </form>
     </div>
     <LastStep v-if="step === 7"/>
-    <button class="next" @click="changeStep">Suivant</button>
+    <button v-if="step !== 7" class="next" @click="changeStep">Suivant</button>
   </div>  
 </template>
 <script>

@@ -1,8 +1,8 @@
 <template>
   <div class="offers__content">
-    <div class="complete">
+    <div v-if="disable === false" class="complete">
+      <img @click="disableComplete" src="Cross.png" alt="cross">
       <p>Completez votre profil avec votre diplome et votre CV pour acceder aux offres d'emplois</p>
-      <Button title="Ajouter mes pieces"/>
     </div>
     <div class="filters">
       <input type="search">
@@ -33,6 +33,7 @@ export default {
   },
   data(){
     return {
+      disable: false,
       times:[
         {
           value: 'Horaires'
@@ -120,6 +121,11 @@ export default {
         }
       ]
     }
+  },
+  methods:{
+    disableComplete(){
+      this.disable = true;
+    }
   }
 }
 </script>
@@ -143,11 +149,21 @@ export default {
    margin: auto; 
   }
   .complete{
+    position: relative;
     margin-top: 2vh;
     width: 100%;
     padding: 15px;
-    background: rgba(125, 125, 125, .5);
-    text-align: center; 
+    background: #FD5C63;
+    border-radius: 5px; 
+    color: #fff;
+    font-weight: 800;
+  }
+  .complete img {
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    top: 5px;
+    right: 5px; 
   }
   .complete p {
     padding-bottom: 2vh;
