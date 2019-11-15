@@ -46,6 +46,11 @@ export default {
 }
 </script>
 <style scoped>
+  label{
+    font-family: 'Telegraf';
+    font-weight: 800;
+    color: #868686;
+  }
   input[type=range]{
     width: 100%;
   }

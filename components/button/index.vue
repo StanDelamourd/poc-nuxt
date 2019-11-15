@@ -31,7 +31,8 @@ export default {
     display: block;
     background: #000;
     padding: 15px;
-    width: 100%;
+    width: 92%;
+    margin: auto;
     color: white;
     margin-top: 1vh;
   }

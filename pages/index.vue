@@ -16,7 +16,7 @@ export default {
   },
   methods:{
     test() {
-      this.$router.push({name: 'register'})
+      this.$router.push({name: 'first'})
     }
   }
 }

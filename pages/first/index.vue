@@ -5,9 +5,12 @@
     </div>
     <div class="form">
       <form>
+        <Field label="Email" inputType="email" />
+        <Field label="Mot de passe" inputType="password" />
+        <Field label="Confirmer mot de passe" inputType="password" />
       </form>
     </div>
-    <button class="register__button">S'inscrire</button>
+    <button class="register__button" @click="$router.push({ name: 'register'})">S'inscrire</button>
     <button>Deja inscrit</button>
   </div>  
 </template>
@@ -33,8 +36,29 @@ export default {
 </script>
 
 <style scoped>
-  form {
+  .form{
+    border-radius: 40px;
+    background: #fff;
+    margin-top: -50px;
+    padding-top: 50px;
+  }
+  button:last-child {
     width: 100%;
+    margin: auto;
+    margin-top: 3vh;
+  }
+  form {
+    width: 80%;
+    margin: auto;
+  }
+  .register__button {
+    display: block;
+    color: white;
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+    background: #FD5C63;
+    border-radius: 20px;
   }
   .register__bg{
     background: url('../../static/bg.png');
@@ -44,5 +68,6 @@ export default {
     color: white;
     text-align:center;
     padding-top: 35vh;
+    font-size: 2.4em;
   }
 </style>
